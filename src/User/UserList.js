@@ -6,9 +6,9 @@ const UserList = (props) => {
   let content = "No users found.";
 
   if (props.users) {
-    content = props.users.map((user) => (
+    content = props.users.map((user) =>
       <UserRecord name={user.name} age={user.age} />
-    ));
+    );
   }
   return <div>{content}</div>;
 };

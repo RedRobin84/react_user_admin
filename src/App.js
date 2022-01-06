@@ -4,8 +4,12 @@ import Container from "./UI/Container";
 import Panel from "./UI/Panel";
 import UserForm from "./User/UserForm";
 import UserList from "./User/UserList";
+import Users from "./Data/Data";
+
+
 
 function App() {
+  const [users, setUsers] = useState(Users);
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -17,7 +21,7 @@ function App() {
       </Container>
       <Container>
         <Panel headerText="User list">
-          <UserList />
+          <UserList users={users} />
         </Panel>
       </Container>
       {showModal && <Modal />}
