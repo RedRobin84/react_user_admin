@@ -1,0 +1,26 @@
+.user-form {
+}
+
+.user-form label {
+  padding: 3px 0px;
+}
+
+.user-form input {
+  margin: 3px 0px;
+  width: 25%;
+}
+
+.user-form button {
+  font-weight: bold;
+  font-size: 1.0rem;
+  margin-top: 15px;
+  border: 3px solid burlywood;
+  width: 15%;
+  border-radius: 5px;
+  box-shadow: 3px;
+}
+
+.user-form button:hover,
+button:active {
+  background-color: gainsboro;
+}

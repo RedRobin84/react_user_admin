@@ -1,0 +1,14 @@
+.panel {
+}
+
+.panel__header {
+  height: 2rem;
+  border-bottom: 2px solid burlywood;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.panel__content {
+}
