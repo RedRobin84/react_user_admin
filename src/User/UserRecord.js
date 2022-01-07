@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types"
+import classes from "./UserRecord.module.css"
 
 const UserRecord = (props) => {
     return (
-        <div>
-            <p>{props.name} ({props.age} years old)</p>
+        <div className={classes['user-record']}>
+            <div>{props.name} ({props.age} years old)</div>
         </div>
     );
 }
