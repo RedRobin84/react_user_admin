@@ -10,13 +10,22 @@ import Users from "./Data/Data";
 
 function App() {
   const [users, setUsers] = useState(Users);
-  const [showModal, setShowModal] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const updateModal = (message) => setMessage(message);
+  const addNewUser = (newUser) => {
+    setUsers(
+      (previousUsers) => {
+        return [newUser, ...previousUsers];
+      }
+    );
+  }
 
   return (
     <div>
       <Container>
         <Panel headerText="Create user">
-          <UserForm />
+          <UserForm updateModal={updateModal} addNewUser={addNewUser} />
         </Panel>
       </Container>
       <Container>
@@ -24,7 +33,7 @@ function App() {
           <UserList users={users} />
         </Panel>
       </Container>
-      {showModal && <Modal />}
+      {message && <Modal updateModal={updateModal} message={message} />}
     </div>
   );
 }

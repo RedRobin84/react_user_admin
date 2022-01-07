@@ -7,7 +7,7 @@ const UserList = (props) => {
 
   if (props.users) {
     content = props.users.map((user) =>
-      <UserRecord name={user.name} age={user.age} />
+      <UserRecord key={user.name + user.age} name={user.name} age={user.age} />
     );
   }
   return <div>{content}</div>;
